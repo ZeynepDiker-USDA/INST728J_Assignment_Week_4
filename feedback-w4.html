@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Employee Portal</title>
+        <script type = "text/javascript">
+            <!--
+               // Form validation code.
+               function validate() {
+               
+                  if( document.FeedbackForm.CaseID.value == "" ) {
+                     alert( "You forgot to enter a Case ID. Please provide the Case ID!" );
+                     document.FeedbackForm.CaseID.focus() ;
+                     return false;
+                  }
+
+                  if( document.FeedbackForm.Subject.value == "" ) {
+                     alert( "You forgot to enter a Subject. Please provide the Subject!" );
+                     document.FeedbackForm.Subject.focus() ;
+                     return false;
+                  }
+
+                  if( document.FeedbackForm.Comment.value == "" ) {
+                     alert( "You forgot to enter a Comment. Please provide the Comment!" );
+                     document.FeedbackForm.Comment.focus() ;
+                     return false;
+                  }
+                  return( true );
+                }
+            //-->
+        </script>        
+        <style>
+
+            #sidebar{
+                width : 20%;
+                float : left;
+                background-color : #b92714;
+                height : auto;
+                padding-bottom : 52px;
+                padding-right: 10px;
+            }
+
+            aside ul li{
+                list-style-image : url("arrow.gif");
+                color: yellow;
+                font-size: 75%;
+                padding-left: 10px;
+                padding-bottom: 3px;
+            }    
+
+            aside a{
+                color: yellow;
+            }
+
+            .form-container {
+                background-color : beige;
+                font-size: 75%; 
+                padding-top : 5px;
+                padding-left : 300px;
+                padding-right : 200px;
+                padding-bottom: 20px;
+                font-weight: bold;
+            }
+
+            .form-main {
+                background-color : #FFBBBB;
+                font-size : 75%; 
+                padding-top : 5px;
+                padding-left : 10px;
+                margin-bottom: 20px;
+            }
+            
+
+            .footer-container{
+                text-align : center;
+                background-color : #d6aea9;
+                padding : .1px;
+            }
+
+        </style>
+    </head>
+    <body>    
+        <div class="container">
+            <div class="header-container">
+                <header>
+                    <img src="umd_logo.png" height="35px">
+                </header>
+            </div>    
+
+            <div class="main-container">
+                <aside id="sidebar">
+                    <ul>
+                        <li><a href="payroll.html"> Payroll Information</a></li>
+                        <li><a href="performance.html"> Performance Appraisal</a></li>
+                        <li><a href="timesheet.html"> TimeSheet</a></li>
+                        <li><a href="leavemgnt.html"> Leave Management</a></li>
+                        <li><a href="healthbenefits.html"> Health Benefits</a></li>
+                        <li><a href="orgchart.html"> Organization Chart</a></li>
+                        <li><a href="accessmgnt.html"> Access Management</a></li>
+                        <li><a href="careerdev.html"> Career Development</a></li>
+                        <li><a href="myprofile.html"> My Profile</a></li>
+                        <li><a href="reimbursement.html"> Expense Reimbursement</a></li>
+                        <li><a href="retirement.html"> Retirement Planning</a></li>
+                        <li><a href="ticketmgnt.html"> Ticket Management</a></li>
+                        <li><a href="documents.html"> Documents</a></li>
+                        <li><a href="feedback-w4.html"> Feedback</a></li>
+                    </ul>
+                </aside>
+                <div id="content">
+                    <div class="form-container">
+                        <p id="form-intro">
+                            Please complete following form
+                        </p>
+                        <div class="form-main">
+                            <b> <font color="FF0000">FEEDBACK</font></b></br></br>
+                            <form name="FeedbackForm" method="post" action="ThankYou-w4.html" onsubmit = "return(validate());">
+                                <table>
+                                    <tr>
+                                        <td width="40%" style="vertical-align:top">
+                                        <label for="CaseID"><b>CaseID:</b></label>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="CaseID" size="10" placeholder="Enter CaseID"> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align:top">
+                                            <label for="Subject"> <b>Subject:<font color="FF0000">*</font></b></label>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Subject" size="30" placeholder="Enter Subject (required)">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align:top">
+                                            <label for="Comment"> <b>Comment:</b></label>
+                                        </td>
+                                        <td>
+                                            <textarea name="Comment" rows="8"></textarea> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align:top">
+                                        
+                                        </td>
+                                        <td>
+                                            <input type="image" src="btn_submit.gif" alt="Submit" value="Submit">
+                                        </td>
+                                    </tr>
+                                </table>      
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="footer-container">
+                <footer>
+                    <p>Copyright &copy; UMD. All Rights Reserved.</p>
+                </footer>
+            </div>
+
+
+        </div>   
+    </body>
+</html>
+
+
